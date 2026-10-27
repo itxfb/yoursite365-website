@@ -1,0 +1,47 @@
+<a class="skip-link" href="#main" (click)="$event.preventDefault(); main.focus()">Skip to content</a>
+<div class="announcement">
+  <span>Launching 06 January 2027 <i></i>&ngsp;<b>3 months FREE + 20% off the following 9 months.</b><span class="announcement-extra"> Limited to 20 Founding Customers.</span></span>
+  <a routerLink="/founding-customers">Claim offer <svg icon="arrow-up-right" size="13" /></a>
+</div>
+<header>
+  <div class="nav-wrap">
+    <a class="logo" routerLink="/" aria-label="YourSite365 home"><img src="/brand/logo-black.png" alt="YourSite365" width="2048" height="565" /></a>
+    <nav [class.open]="menuOpen()" aria-label="Main navigation" (click)="menuOpen.set(false)">
+      @for (item of nav; track item[1]) {
+        <a [routerLink]="item[1]" routerLinkActive="active">{{ item[0] }}</a>
+      }
+      <a class="mobile-demo" routerLink="/book-a-demo">Book a Demo ↗</a>
+    </nav>
+    <div class="nav-ctas">
+      <a routerLink="/get-a-quote">Get a Quote</a>
+      <a class="btn yellow" routerLink="/book-a-demo">Book a Demo<svg icon="arrow-up-right" size="17" /></a>
+    </div>
+    <button class="menu-toggle" [attr.aria-label]="menuOpen() ? 'Close menu' : 'Open menu'" [attr.aria-expanded]="menuOpen()" (click)="menuOpen.set(!menuOpen())">
+      <svg [icon]="menuOpen() ? 'x' : 'menu'" />
+    </button>
+  </div>
+</header>
+<main id="main" tabindex="-1" #main>
+  <router-outlet />
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <a class="logo light" routerLink="/" aria-label="YourSite365 home"><img src="/brand/logo-yellow.png" alt="YourSite365" width="2048" height="565" /></a>
+        <p>Your Site. Connected.</p>
+        <span class="uk-tag"><svg icon="map-pin" size="12" /> Built in the UK. Built for construction.</span>
+      </div>
+      @for (group of footer; track group.title) {
+        <div>
+          <h4>{{ group.title }}</h4>
+          @for (link of group.links; track link[0]) {
+            <a [routerLink]="link[1]" [fragment]="link[2]">{{ link[0] }}</a>
+          }
+        </div>
+      }
+    </div>
+    <div class="footer-bottom"><span>© 2026 YOUR SITE 365 LTD. All rights reserved.</span><span>Company No. 16684857</span></div>
+    <p class="legal-small">YOUR SITE 365 LTD is registered in England and Wales. Registered office: 74 Brook Road, Princes Risborough, HP27 9HJ.<br />YourSite365 launches 06 January 2027. Features, integrations and availability are subject to development, testing and final release.</p>
+  </div>
+</footer>

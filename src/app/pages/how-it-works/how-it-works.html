@@ -1,0 +1,21 @@
+<section page-hero eyebrow="HOW IT WORKS" copy="Information moves with the worker, reducing repeated administration at every stage.">
+  <h1>A simpler journey<br /><em>through site.</em></h1>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div journey detailed></div>
+    <div class="steps-list">
+      @for (s of steps; track s[0]; let i = $index) {
+        <article>
+          <span>0{{ i + 1 }}</span><h3>{{ s[0] }}</h3><p>{{ s[1] }}</p>
+          @if (i === 3) {
+            <a class="btn dark" routerLink="/book-a-demo">See YourSite365 in Action<svg icon="arrow-up-right" size="17" /></a>
+          }
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section final-cta></section>

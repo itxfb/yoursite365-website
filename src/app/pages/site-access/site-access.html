@@ -1,0 +1,64 @@
+<section page-hero eyebrow="SITE ACCESS" copy="Connect the requirements a worker must complete with the decision to allow that worker onto site.">
+  <h1>Smarter access.<br /><em>Better information.</em></h1>
+  <a class="btn dark" routerLink="/contact">Discuss Site Access<svg icon="arrow-up-right" size="17" /></a>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="eyebrow"><span></span>BEFORE ACCESS IS GRANTED</div>
+    <h2>Readiness comes first.</h2>
+    <div class="clearance-flow">
+      @for (step of clearance; track step; let i = $index) {
+        <div><span>0{{ i + 1 }}</span><svg icon="circle-check" /><h3>{{ step }}</h3></div>
+      }
+      <div class="clearance-final"><svg icon="scan-line" /><h3>ACCESS</h3></div>
+    </div>
+    <div class="mid-cta">
+      <p>Clearance is based on the requirements configured for the site and relevant approvals.</p>
+      <a class="btn dark" routerLink="/book-a-demo">Book a Site Access Demo<svg icon="arrow-up-right" size="17" /></a>
+    </div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="container">
+    <div class="eyebrow"><span></span>FLEXIBLE ACCESS TECHNOLOGY</div>
+    <h2>Technology that fits<br /><em>your project.</em></h2>
+    <div class="feature-lines">
+      @for (t of technology; track t[1]) {
+        <div><svg [icon]="t[0]" size="32" /><h3>{{ t[1] }}</h3><p>{{ t[2] }}</p></div>
+      }
+    </div>
+    <p>Controlled physical access does not require a personal worker software account. Workers remain subject to registration, identification and site-clearance requirements.</p>
+    <p class="disclaimer">Hardware functionality depends on selected hardware, integration, site configuration, connectivity and final testing.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container two-col">
+    <div>
+      <div class="eyebrow"><span></span>KNOW WHO’S ON SITE</div>
+      <h2>Access meets<br /><em>attendance.</em></h2>
+      <p>Access activity can feed attendance visibility, helping authorised teams understand workforce presence across the project.</p>
+      <a class="btn dark" routerLink="/book-a-demo">Book a Demo<svg icon="arrow-up-right" size="17" /></a>
+    </div>
+    <div product variant="attendance"></div>
+  </div>
+</section>
+
+<section class="section integration-section">
+  <div class="container two-col">
+    <div>
+      <div class="eyebrow"><span></span>INDUSTRY INTEGRATIONS</div>
+      <h2>Built with<br /><em>construction in mind.</em></h2>
+    </div>
+    <div>
+      <span class="pill">PLANNED INTEGRATION</span>
+      <h3>CSCS Smart Check</h3>
+      <p>CSCS integration is planned and subject to CSCS review, approval and technical integration. It is not currently live.</p>
+      <p>We intend to expand the systems and hardware that can connect with YourSite365 as the platform develops.</p>
+    </div>
+  </div>
+</section>
+
+<section final-cta></section>

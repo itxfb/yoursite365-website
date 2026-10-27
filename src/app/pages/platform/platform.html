@@ -1,0 +1,54 @@
+<section page-hero eyebrow="THE CONNECTED CONSTRUCTION PLATFORM" copy="Bring the workforce and operational processes your teams deal with every day into one connected journey.">
+  <h1>One platform.<br /><em>Your connected site.</em></h1>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="platform-demo"><div product full></div></div>
+    <p class="caption">Illustrative interface and sample data. Final product may differ.</p>
+    <div journey></div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="container">
+    <div class="eyebrow"><span></span>BUILT AROUND REAL SITE OPERATIONS</div>
+    <h2>Every stage.<br /><em>Working together.</em></h2>
+    <div class="module-grid">
+      @for (m of modules; track m.title; let i = $index) {
+        <article [attr.id]="m.id"><span>{{ (i + 1).toString().padStart(2, '0') }}</span><h3>{{ m.title }}</h3><p>{{ m.copy }}</p></article>
+      }
+    </div>
+    <div class="mid-cta">
+      <span>Tell us which processes you want to bring together.</span>
+      <a class="btn dark" routerLink="/get-a-quote">Discuss Your Requirements<svg icon="arrow-up-right" size="17" /></a>
+    </div>
+  </div>
+</section>
+
+<section id="commercial" class="section">
+  <div class="container two-col">
+    <div>
+      <div class="eyebrow"><span></span>FROM HOURS TO COST</div>
+      <h2>Make approved hours<br /><em>mean something.</em></h2>
+      <p>Connect agreed labour rates with approved hours. Compare by worker, subcontractor, site, project or reporting period.</p>
+      <p>Commercial is designed for gross labour-cost valuation and management information. It is not payroll or tax software.</p>
+      <a class="btn dark" routerLink="/book-a-demo">See Commercial Features<svg icon="arrow-up-right" size="17" /></a>
+    </div>
+    <div product variant="commercial"></div>
+  </div>
+</section>
+
+<section id="mobile" class="section soft">
+  <div class="container two-col">
+    <div class="mobile-art"><div phone></div></div>
+    <div>
+      <div class="eyebrow"><span></span>DESKTOP + MOBILE</div>
+      <h2>The right information.<br /><em>Where work happens.</em></h2>
+      <p>Account-based users can access their profiles, sites, inductions, RAMS, training, certificates, notifications, attendance and timesheets through the planned mobile app.</p>
+      <span class="pill">COMING JANUARY 2027</span>
+    </div>
+  </div>
+</section>
+
+<section final-cta></section>

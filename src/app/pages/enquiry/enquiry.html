@@ -1,0 +1,97 @@
+<section class="form-page">
+  <div class="container form-layout">
+    <div class="form-intro">
+      <div class="eyebrow"><span></span>{{ copy().eyebrow }}</div>
+      <h1>{{ copy().title }}<br /><em>{{ copy().em }}</em></h1>
+      <p>{{ copy().intro }}</p>
+      @if (kind() === 'founding') {
+        <div class="form-offer"><strong>3 MONTHS FREE</strong><span>+ 20% OFF THE FOLLOWING 9 MONTHS</span></div>
+        <p>Your free period starts when your service goes live.</p>
+        <ul class="benefit-list">
+          @for (b of benefits; track b) {
+            <li><svg icon="check" size="15" />{{ b }}</li>
+          }
+        </ul>
+        <small>Limited to the first 20 qualifying customer registrations accepted by YOUR SITE 365 LTD. Eligibility, service scope, commencement date and full promotional terms will be confirmed before subscription.</small>
+      } @else {
+        <div class="form-note"><svg icon="shield-check" /><b>Built around construction.</b><p>From one site to complex projects. Let’s find the right fit for your business.</p></div>
+      }
+      <div class="form-launch"><b>Launching 06 January 2027</b><div countdown compact></div></div>
+      @if (kind() === 'contact') {
+        <p class="legal-small">YOUR SITE 365 LTD · Company No. 16684857<br />Princes Risborough, United Kingdom.</p>
+      }
+    </div>
+
+    @if (reference()) {
+      <div class="form-success" role="status">
+        <svg icon="circle-check" size="48" />
+        <h2>Enquiry saved.</h2>
+        <p>Thank you. Your {{ copy().noun }} has been recorded.</p>
+        <span class="pill">REFERENCE {{ reference() }}</span>
+        <p>Submitting an enquiry does not reserve an offer place or confirm an appointment. Details will be agreed separately.</p>
+        <button class="btn dark" (click)="reference.set('')">Send Another Enquiry <svg icon="arrow-up-right" size="17" /></button>
+      </div>
+    } @else {
+      <form class="enquiry-form" (submit)="submit($event)">
+        <div class="form-heading"><span>YOUR DETAILS</span><small>* Required fields</small></div>
+        <div class="form-grid">
+          <label>Full name *<input required name="name" autocomplete="name" maxlength="200" placeholder="Your full name" /></label>
+          <label>Company name *<input required name="company" autocomplete="organization" maxlength="200" placeholder="Your company" /></label>
+          <label>Work email *<input required type="email" name="email" autocomplete="email" maxlength="254" placeholder="you@company.co.uk" /></label>
+          <label>Telephone number<input name="phone" type="tel" autocomplete="tel" maxlength="60" placeholder="Your telephone number" /></label>
+          @if (kind() !== 'contact') {
+            <label>Company type *<select name="type" required>
+                <option value="" disabled selected>Select company type</option>
+                <option>Main Contractor</option>
+                <option>Subcontractor</option>
+                <option>Other Construction Business</option>
+              </select></label>
+            <label>Approximate workforce size *<select name="workforce" required>
+                <option value="" disabled selected>Select workforce size</option>
+                @for (s of workforceSizes; track s) {
+                  <option>{{ s }}</option>
+                }
+              </select></label>
+            <label>Number of sites<select name="sites">
+                <option value="" selected>Select number of sites</option>
+                @for (s of siteCounts; track s) {
+                  <option>{{ s }}</option>
+                }
+              </select></label>
+            @if (kind() === 'quote') {
+              <label>Site access hardware required?<select name="hardware">
+                  <option>Not sure yet</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select></label>
+              <label>Expected service start date<input type="date" name="date" min="2027-01-06" /></label>
+            }
+          } @else {
+            <label class="form-wide">Subject<input name="type" placeholder="How can we help?" maxlength="100" /></label>
+          }
+        </div>
+        @if (kind() !== 'contact') {
+          <fieldset>
+            <legend>What are you interested in?</legend>
+            <div class="checkbox-grid">
+              @for (i of interests; track i) {
+                <label><input name="interests" type="checkbox" [value]="i" />{{ i }}</label>
+              }
+            </div>
+          </fieldset>
+        }
+        <label>Message<textarea name="message" rows="4" maxlength="5000" placeholder="Tell us a little about your sites and what you’d like to improve."></textarea></label>
+        <label class="honeypot" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off" /></label>
+        @if (kind() !== 'founding') {
+          <label class="check-label"><input name="offer" type="checkbox" />I would also like information about the Founding Customer Offer.</label>
+        }
+        <label class="check-label consent"><input type="checkbox" name="consent" required />&ngsp;<span>I acknowledge that YOUR SITE 365 LTD will use these details to respond to my enquiry, as explained in the <a href="/privacy-notice" target="_blank" rel="noreferrer">Privacy Notice</a>. *</span></label>
+        @if (error()) {
+          <p class="form-error" role="alert">{{ error() }}</p>
+        }
+        <button class="btn dark" type="submit" [disabled]="saving()">{{ saving() ? 'Saving your enquiry…' : copy().submit }}<svg icon="arrow-up-right" size="17" /></button>
+        <small class="form-footnote">Enquiries are securely recorded on this website. No automated email confirmation is sent.</small>
+      </form>
+    }
+  </div>
+</section>

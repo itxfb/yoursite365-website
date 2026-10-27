@@ -1,0 +1,32 @@
+<section page-hero eyebrow="SECURITY &amp; TRUST" copy="Security, access control and accountability are part of the YourSite365 platform design.">
+  <h1>Trust starts with<br /><em>how it’s built.</em></h1>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="security-list">
+      @for (s of items; track s[0]; let i = $index) {
+        <div><span>0{{ i + 1 }}</span><svg icon="shield-check" /><h3>{{ s[0] }}</h3><p>{{ s[1] }}</p></div>
+      }
+    </div>
+    <div class="mid-cta">
+      <p>Discuss security requirements for your organisation.</p>
+      <a class="btn dark" routerLink="/contact">Talk to Our Team<svg icon="arrow-up-right" size="17" /></a>
+    </div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="container two-col">
+    <div>
+      <div class="eyebrow"><span></span>INDEPENDENT ASSURANCE</div>
+      <h2>Evidence.<br /><em>Before badges.</em></h2>
+    </div>
+    <div>
+      <p>Cyber Essentials certification and independent penetration testing are part of the security programme.</p>
+      <p>Certification and testing results will only be displayed once successfully completed. No certification or test outcome is claimed on this website.</p>
+    </div>
+  </div>
+</section>
+
+<section final-cta></section>

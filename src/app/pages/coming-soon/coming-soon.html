@@ -1,0 +1,40 @@
+<section page-hero eyebrow="THE COUNTDOWN HAS STARTED" copy="We’re preparing YourSite365 for its first customer launch. Development, integration and testing are underway.">
+  <h1>06 January<br /><em>2027.</em></h1>
+  <div countdown></div>
+  <div class="button-row">
+    <a class="btn dark" routerLink="/book-a-demo">Book an Early Demo<svg icon="arrow-up-right" size="17" /></a>
+    <a class="btn outline" routerLink="/founding-customers">Founding Customer Offer<svg icon="arrow-up-right" size="17" /></a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="eyebrow"><span></span>LAUNCH PLATFORM · JANUARY 2027</div>
+    <h2>Connected from day one.</h2>
+    <div class="launch-modules">
+      @for (m of modules; track m) {
+        <span><svg icon="check" size="15" />{{ m }}</span>
+      }
+    </div>
+    <p class="disclaimer">Features are subject to final development, testing and release readiness.</p>
+    <div class="mid-cta">
+      <p>Be part of the first customer journey.</p>
+      <a class="btn dark" routerLink="/founding-customers">Claim Founding Customer Offer<svg icon="arrow-up-right" size="17" /></a>
+    </div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="container">
+    <div class="eyebrow"><span></span>WHAT COMES NEXT</div>
+    <h2>A platform that<br /><em>keeps building.</em></h2>
+    <div class="roadmap-detailed">
+      @for (r of roadmap; track r[1]) {
+        <div><span class="pill muted">{{ r[0] }}</span><h3>{{ r[1] }}</h3><p>{{ r[2] }}</p></div>
+      }
+    </div>
+    <p class="disclaimer">Future development is a roadmap, not a commitment to specific delivery dates.</p>
+  </div>
+</section>
+
+<section final-cta></section>

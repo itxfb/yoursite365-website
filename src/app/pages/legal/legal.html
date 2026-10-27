@@ -1,0 +1,41 @@
+<section page-hero eyebrow="WEBSITE INFORMATION" copy="Information about this pre-launch website.">
+  <h1>{{ titles[type()] }}</h1>
+  <a class="text-link" routerLink="/contact">Ask a question <svg icon="arrow-up-right" size="17" /></a>
+</section>
+
+<section class="section">
+  <div class="container legal-content">
+    <div class="policy-note">Pre-launch draft · These pages describe the current website. Final notices and terms require company review before public launch.</div>
+    @switch (type()) {
+      @case ('privacy-notice') {
+        <h2>Your enquiry information</h2>
+        <p>YOUR SITE 365 LTD, company number 16684857, operates this website. Registered office: 74 Brook Road, Princes Risborough, HP27 9HJ.</p>
+        <p>The enquiry forms collect your name, company, email and any optional contact details, project requirements and message you provide. These details are stored to record and respond to your enquiry and discuss the services you request.</p>
+        <h3>How this website works</h3>
+        <p>Enquiries are recorded in the website’s hosted database. They are not displayed publicly. This website does not automatically email your enquiry to a sales inbox or send you an email confirmation.</p>
+        <h3>Before public launch</h3>
+        <p>The company must finalise its full privacy notice, including lawful bases, retention periods, hosting and processor details, international transfers, privacy contact arrangements and rights-request procedures.</p>
+        <p>Please avoid entering sensitive worker records or unnecessary personal information into an enquiry form.</p>
+        <a class="btn dark" routerLink="/contact">Ask About Your Data<svg icon="arrow-up-right" size="17" /></a>
+      }
+      @case ('cookie-policy') {
+        <h2>A straightforward website.</h2>
+        <p>This website does not add advertising cookies, marketing trackers or analytics tools. Its product demonstrations use temporary in-page state.</p>
+        <p>The hosting platform may use authentication or essential service cookies to operate this private site. Their operation is controlled by the hosting platform.</p>
+        <h3>Future changes</h3>
+        <p>If analytics or marketing services are added, this policy and the relevant consent controls must be reviewed before those services are enabled.</p>
+      }
+      @default {
+        <h2>About the pre-launch website</h2>
+        <p>This website introduces the planned YourSite365 platform. Launch is scheduled for 06 January 2027. Features, integrations and availability remain subject to final development, testing and release readiness.</p>
+        <p>Product previews use illustrative interfaces and sample data. They are not a live customer environment.</p>
+        <h3>Enquiries, demonstrations and quotes</h3>
+        <p>Submitting a form is an enquiry. It does not create a subscription, confirm a demonstration appointment or guarantee acceptance into the Founding Customer Offer. Pricing and service requirements will be agreed separately.</p>
+        <h3>Founding Customer Offer</h3>
+        <p>The offer is intended for the first 20 qualifying customer registrations accepted by YOUR SITE 365 LTD: three months free on the selected software subscription, followed by 20% off the following nine months. The free period starts when the service goes live. Eligibility, service scope, commencement date and full promotional terms must be confirmed before subscription.</p>
+        <h3>Final terms</h3>
+        <p>The company must review and approve full website and promotional terms before public launch. Customer service contracts are separate from this website.</p>
+      }
+    }
+  </div>
+</section>

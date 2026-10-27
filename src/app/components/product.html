@@ -1,0 +1,79 @@
+<div class="product-top">
+  <div class="mini-logo"><img src="/brand/logo-blue.png" alt="YourSite365" width="2048" height="564" /></div>
+  <span class="mock-site"><svg icon="building-2" size="11" /> Riverside development <svg icon="chevron-down" size="11" /></span>
+  <span class="preview-label">Illustrative product preview</span>
+  <svg icon="bell" size="13" />
+  <span class="avatar">JS</span>
+</div>
+<div class="product-inner">
+  <aside>
+    <span class="aside-title">WORKSPACE</span>
+    <div><svg icon="layout-dashboard" size="13" /> Overview</div>
+    @for (t of tabs; track t.id) {
+      <button [class.selected]="tab() === t.id" [attr.aria-pressed]="tab() === t.id" (click)="tab.set(t.id)"><svg [icon]="t.icon" size="13" /><span>{{ t.label }}</span></button>
+    }
+    <div><svg icon="file-check-corner" size="13" /> Compliance</div>
+    <div><svg icon="scan-line" size="13" /> Site access</div>
+    <div><svg icon="clipboard-check" size="13" /> Timesheets</div>
+    <span class="aside-bottom"><span class="avatar">JS</span> James Smith<br /><small>Company Admin</small></span>
+  </aside>
+  <div class="dashboard">
+    <div class="dash-title">
+      <div>
+        <small>YOUR SITE, AT A GLANCE</small>
+        <h3>{{ title() }}</h3>
+        <p>Riverside development <span>·</span> Example data</p>
+      </div>
+      <span class="today"><span></span> Site connected</span>
+    </div>
+    <div class="stats">
+      @for (s of stats(); track s[0]; let i = $index) {
+        <div>
+          <span>{{ s[0] }}<svg [icon]="statIcons[i]" size="12" /></span>
+          <strong>{{ s[1] }}</strong>
+          <small><i [class.amber]="i === 2"></i>{{ s[2] }}</small>
+        </div>
+      }
+    </div>
+    <div class="chart-row">
+      <div class="chart">
+        <div class="panel-heading"><b>{{ tab() === 'commercial' ? 'Labour hours by day' : 'Site attendance' }}</b><span>This week⌄</span></div>
+        <div class="chart-body">
+          <div class="y-axis">150<br />100<br />50<br />0</div>
+          <div class="bars">
+            @for (h of bars; track $index) {
+              <div><div [style.height.%]="h" [class.highlight]="$index === 4"></div><small>{{ days[$index] }}</small></div>
+            }
+          </div>
+        </div>
+      </div>
+      <div class="ready">
+        <span class="panel-heading"><b>Site readiness</b></span>
+        <div class="donut"><span>92<small>%</small></span></div>
+        <small><i></i> Requirements complete</small>
+      </div>
+    </div>
+    <div class="table-panel">
+      <div class="panel-heading"><b>{{ tab() === 'commercial' ? 'Approved labour' : 'Workforce activity' }}</b><span>View all <svg icon="arrow-right" size="10" /></span></div>
+      <table>
+        <thead>
+          <tr>
+            @for (h of heads(); track h) {
+              <th>{{ h }}</th>
+            }
+          </tr>
+        </thead>
+        <tbody>
+          @for (row of rows(); track row[0]; let r = $index) {
+            <tr>
+              <td><span [class]="'person p' + r">{{ row[0].split(' ')[1][0] }}</span>{{ row[0] }}</td>
+              <td>{{ row[1] }}</td>
+              <td>{{ row[2] }}</td>
+              <td><span class="status" [class.pending]="row[3] === 'Pending'">@if (row[3] !== 'Pending') {<span>• </span>}{{ row[3] }}</span></td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

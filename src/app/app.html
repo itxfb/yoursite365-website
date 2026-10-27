@@ -5,7 +5,7 @@
 </div>
 <header>
   <div class="nav-wrap">
-    <a class="logo" routerLink="/" aria-label="YourSite365 home"><img src="/brand/logo-black.png" alt="YourSite365" width="2048" height="565" /></a>
+    <a class="logo" routerLink="/" aria-label="YourSite365 home"><img src="brand/logo-black.png" alt="YourSite365" width="2048" height="565" /></a>
     <nav [class.open]="menuOpen()" aria-label="Main navigation" (click)="menuOpen.set(false)">
       @for (item of nav; track item[1]) {
         <a [routerLink]="item[1]" routerLinkActive="active">{{ item[0] }}</a>
@@ -28,7 +28,7 @@
   <div class="container">
     <div class="footer-main">
       <div>
-        <a class="logo light" routerLink="/" aria-label="YourSite365 home"><img src="/brand/logo-yellow.png" alt="YourSite365" width="2048" height="565" /></a>
+        <a class="logo light" routerLink="/" aria-label="YourSite365 home"><img src="brand/logo-yellow.png" alt="YourSite365" width="2048" height="565" /></a>
         <p>Your Site. Connected.</p>
         <span class="uk-tag"><svg icon="map-pin" size="12" /> Built in the UK. Built for construction.</span>
       </div>

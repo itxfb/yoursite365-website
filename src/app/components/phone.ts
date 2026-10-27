@@ -8,7 +8,7 @@ import { Icon } from './icon';
   template: `
     <div class="phone-camera"></div>
     <div class="phone-status">9:41 <span>••• ▰</span></div>
-    <div class="phone-brand"><img src="/brand/logo-blue.png" alt="YourSite365" width="2048" height="564" /><svg icon="bell" size="12" /></div>
+    <div class="phone-brand"><img src="brand/logo-blue.png" alt="YourSite365" width="2048" height="564" /><svg icon="bell" size="12" /></div>
     <small class="phone-greeting">GOOD MORNING, JAMES</small>
     <h4>Your site.<br />Your day.</h4>
     <div class="phone-site">

@@ -11,9 +11,9 @@ export class App {
   protected readonly menuOpen = signal(false);
 
   protected readonly nav = [
-    ['Platform', '/platform'],
+    ['Software', '/platform'],
     ['Site Access', '/site-access'],
-    ['Solutions', '/solutions'],
+    ['Who It’s For', '/solutions'],
     ['How It Works', '/how-it-works'],
     ['Coming Soon', '/coming-soon'],
     ['About', '/about']
@@ -27,7 +27,7 @@ export class App {
         ['Site Access', '/site-access'],
         ['Compliance', '/platform', 'compliance'],
         ['Time & Attendance', '/platform', 'attendance'],
-        ['Commercial', '/platform', 'commercial'],
+        ['Labour Costs', '/platform', 'commercial'],
         ['Mobile App', '/platform', 'mobile']
       ]
     },

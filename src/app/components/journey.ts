@@ -28,23 +28,23 @@ export class Journey {
   protected readonly current = signal(0);
   protected readonly steps = ['Register', 'Induct', 'Approve', 'Access', 'Attend', 'Comply', 'Timesheet', 'Cost'];
   protected readonly titles = [
-    'A better first step.',
-    'Ready before arrival.',
-    'The right people decide.',
-    'Approval meets the gate.',
-    'Every working day, connected.',
-    'Keep requirements visible.',
-    'One structured record.',
-    'From hours to insight.'
+    'Collect worker details',
+    'Explain the site safety rules',
+    'Review and approve workers',
+    'Control site entry',
+    'Record sign-in and sign-out',
+    'Keep requirements up to date',
+    'Review hours and prepare timesheets',
+    'Calculate labour costs'
   ];
   protected readonly copies = [
-    'Capture the right information through configurable company and site registration.',
-    'Complete applicable online and site inductions, with completion recorded against the worker.',
-    'Authorised teams review requirements and make the relevant site approval decisions.',
-    'Connect access clearance with supported mobile and physical access methods.',
-    'Capture sign-in and sign-out activity for site attendance and labour-hour review.',
-    'Bring RAMS, training, certificates and other workforce requirements into one place.',
-    'Turn reviewed and approved labour hours into organised timesheets.',
-    'Apply agreed labour rates to approved hours for gross labour-cost valuation.'
+    'Collect each worker’s details, company information and required documents before they start on site.',
+    'Give workers the site safety information they need and record completion of their required online and site inductions.',
+    'Authorised staff check the required information and decide whether a worker is approved for site access.',
+    'Apply your site’s access rules when workers use the supported entry system configured for your site.',
+    'Record when workers arrive and leave, so your team can see attendance and review working hours.',
+    'Track required training, certificates and safety documents before site approval and throughout the job.',
+    'Review recorded working hours and turn approved hours into timesheets.',
+    'Apply agreed labour rates to approved hours to calculate labour costs.'
   ];
 }

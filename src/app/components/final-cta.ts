@@ -11,9 +11,9 @@ import { Icon } from './icon';
     <div class="container">
       <div class="eyebrow"><span></span>LET’S CONNECT YOUR SITE</div>
       <div class="final-grid">
-        <h2>Ready for a more<br /><em>connected site?</em></h2>
+        <h2>See how YourSite365 could<br /><em>work on your site.</em></h2>
         <div>
-          <p>Launching 06 January 2027.<br />Let’s talk about what your sites need.</p>
+          <p>Launching 05 February 2027.<br />Let’s talk about what your sites need.</p>
           <div class="button-row">
             <a class="btn yellow" routerLink="/book-a-demo">Book a Demo<svg icon="arrow-up-right" size="17" /></a>
             <a class="btn outline" routerLink="/get-a-quote">Get a Quote<svg icon="arrow-up-right" size="17" /></a>

@@ -1,11 +1,11 @@
-import { booleanAttribute, Component, input } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Icon } from './icon';
 
 @Component({
   selector: 'section[offer]',
   imports: [RouterLink, Icon],
-  host: { class: 'offer-section', '[class.large]': 'large()' },
+  host: { class: 'offer-section' },
   template: `
     <div class="container offer-grid">
       <div>
@@ -24,6 +24,4 @@ import { Icon } from './icon';
     </div>
   `
 })
-export class Offer {
-  readonly large = input(false, { transform: booleanAttribute });
-}
+export class Offer {}

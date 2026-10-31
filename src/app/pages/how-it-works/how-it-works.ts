@@ -19,6 +19,6 @@ export class HowItWorks {
     ['Access', 'Approved workers use a supported site-access method.'],
     ['Attend', 'Sign-in and sign-out activity creates an attendance record.'],
     ['Approve hours', 'Review and approve labour hours for the relevant company and site.'],
-    ['Commercial', 'Approved hours feed timesheet and labour-cost information.']
+    ['Labour Costs', 'Approved hours feed timesheet and labour-cost information.']
   ];
 }

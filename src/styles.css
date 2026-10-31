@@ -2775,15 +2775,6 @@ tr:last-child td {
 .legal-content p {
   font-size: 15px;
 }
-.launched {
-  font-size: 18px;
-  font-weight: 600;
-}
-.launched a {
-  margin-top: 6px;
-  font-size: 12px;
-  display: block;
-}
 @media (min-width: 1550px) {
   .hero-visual {
     width: 740px;
@@ -2839,7 +2830,7 @@ tr:last-child td {
     transform: scale(0.9);
   }
   .hero h1 {
-    font-size: 75px;
+    font-size: 6vw;
   }
   .hero-copy > p {
     font-size: 13px;
@@ -2890,7 +2881,7 @@ tr:last-child td {
     display: none;
   }
   .hero h1 {
-    font-size: 64px;
+    font-size: 6.5vw;
   }
   .hero-visual {
     top: 120px;
@@ -3074,7 +3065,7 @@ tr:last-child td {
     font-size: 8px;
   }
   .hero h1 {
-    font-size: clamp(64px, 11.5vw, 84px);
+    font-size: clamp(44px, 13.5vw, 84px);
     line-height: 1.07;
   }
   .hero h1 em:after {
@@ -3630,9 +3621,6 @@ tr:last-child td {
   }
 }
 @media (max-width: 380px) {
-  .hero h1 {
-    font-size: 57px;
-  }
   .hero-copy > p {
     font-size: 12px;
   }
@@ -3694,26 +3682,6 @@ tr:last-child td {
 }
 .hero-launch {
   margin-top: 27px;
-}
-.offer-section.large {
-  color: #f1f2df;
-  background: #27282a;
-}
-.offer-section.large .eyebrow > span {
-  background: var(--yellow);
-}
-.offer-section.large p {
-  color: #a4a9be;
-}
-.offer-section.large .btn.dark {
-  background: var(--yellow);
-  color: var(--ink);
-}
-.offer-section.large .offer-figures strong {
-  color: var(--yellow);
-}
-.offer-section.large .offer-figures > small {
-  color: #797f96;
 }
 :root {
   --ink: #151515;
@@ -3840,28 +3808,6 @@ nav > a:hover,
 .offer-section .offer-figures > p,
 .offer-section .offer-figures > small {
   color: #41450b;
-}
-.offer-section.large {
-  background: var(--blue);
-  color: #fff;
-}
-.offer-section.large .eyebrow,
-.offer-section.large h2 {
-  color: #fff;
-}
-.offer-section.large h2 em {
-  color: var(--yellow);
-}
-.offer-section.large p,
-.offer-section.large .offer-figures > p,
-.offer-section.large .offer-figures > small {
-  color: #e1e7ff;
-}
-.offer-section.large .offer-figures > div > b {
-  color: #fff;
-}
-.offer-section.large .offer-plus {
-  color: #b5c4ff;
 }
 .final-cta {
   background: #edf1ff;

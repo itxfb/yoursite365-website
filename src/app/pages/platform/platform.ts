@@ -14,17 +14,17 @@ import { Product } from '../../components/product';
 })
 export class Platform {
   protected readonly modules = [
-    { title: 'Workforce Registration', copy: 'Configurable workforce registration for your company and sites.', id: 'workforce' },
+    { title: 'Workforce Registration', copy: 'Collect worker details and documents using a form your company can customise.', id: 'workforce' },
     { title: 'Online Induction', copy: 'Complete required onboarding before arriving on site.' },
     { title: 'Site Induction', copy: 'Manage booking, delivery and completion of site-specific inductions.' },
     { title: 'Site Access', copy: 'Connect worker approval with physical and digital access.' },
     { title: 'Attendance', copy: 'See site sign-in, sign-out and workforce presence.', id: 'attendance' },
-    { title: 'RAMS', copy: 'Issue RAMS and record worker acknowledgement.', id: 'compliance' },
+    { title: 'Safety Documents — RAMS', copy: 'Share risk assessments and method statements, and record workers’ acknowledgements.', id: 'compliance' },
     { title: 'Training & Certificates', copy: 'Bring qualifications, training records and certificates together.' },
     { title: 'Behaviour Cards', copy: 'Record positive and negative behaviour through structured controls.' },
     { title: 'Drugs & Alcohol', copy: 'Controlled testing processes for authorised management teams.' },
     { title: 'Timesheets', copy: 'Turn approved labour hours into structured timesheets.' },
-    { title: 'Commercial', copy: 'Connect approved hours and agreed rates to labour costs.', id: 'labour-costs' },
+    { title: 'Labour Costs', copy: 'Connect approved hours and agreed rates to labour costs.', id: 'labour-costs' },
     { title: 'Profiles', copy: 'Relevant worker information for authorised users.' },
     { title: 'Notifications', copy: 'Keep people informed about actions, approvals and site requirements.' }
   ];

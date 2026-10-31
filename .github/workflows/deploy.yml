@@ -32,6 +32,12 @@ jobs:
       - name: Create CNAME
         run: echo "www.yoursite365.com" > ./dist/yoursite365-website/browser/CNAME
 
+      - name: Static page per route
+        working-directory: ./dist/yoursite365-website/browser
+        run: |
+          for r in $(sed -n "s/.*path: '\([a-z-]\+\)'.*/\1/p" "$GITHUB_WORKSPACE/src/app/app.routes.ts"); do cp index.html "$r.html"; done
+          cp index.html 404.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

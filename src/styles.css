@@ -1349,6 +1349,9 @@ nav > a:hover {
   right: 3px;
   box-shadow: 0 10px 40px #24242611;
 }
+.mobile-section {
+  overflow-x: clip;
+}
 .mobile-section p {
   font-size: 14px;
 }
@@ -1357,9 +1360,10 @@ nav > a:hover {
   margin: 26px 0;
   font-size: 12px;
   line-height: 2.9;
+  grid-template-columns: 1fr auto;
+  display: grid;
 }
 .mobile-features > span {
-  float: right;
   font-size: 14px;
 }
 .offer-section {
@@ -2155,7 +2159,7 @@ tr:last-child td {
   border-radius: 27px;
   flex-shrink: 0;
   width: 173px;
-  height: 360px;
+  height: 410px;
   padding: 9px 10px;
   font-family: FAC;
   line-height: 1.3;
@@ -3157,7 +3161,7 @@ tr:last-child td {
     height: 16px;
   }
   .two-col {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 30px;
   }
   .section-top {
@@ -3256,9 +3260,7 @@ tr:last-child td {
   .access-visual {
     transform-origin: top;
     width: 400px;
-    max-width: 100%;
-    height: 350px;
-    margin: 0 auto;
+    margin: 0 calc(50% - 200px);
     transform: scale(0.85);
   }
   .access-section {
@@ -3441,6 +3443,7 @@ tr:last-child td {
   }
   .mid-cta > span {
     font-size: 14px;
+    display: block;
   }
   .two-col > .product {
     width: 100%;

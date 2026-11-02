@@ -14,7 +14,7 @@ export class SiteAccess {
   protected readonly clearance = ['Registration', 'Induction', 'RAMS', 'Training & documents', 'Site approval'];
   protected readonly technology = [
     ['smartphone', 'Mobile QR', 'Account-based users scan site QR codes in the mobile app and choose Sign In or Sign Out.'],
-    ['scan-line', 'Facial recognition', 'Integrations are being developed for selected facial-recognition readers in controlled site environments.'],
-    ['radio', 'Readers & turnstiles', 'Supported physical readers and turnstiles can form part of the wider access ecosystem.']
+    ['scan-line', 'Facial recognition', 'Integrations are being developed for selected facial-recognition readers in controlled site environments. A supported non-biometric access option will be available for workers who do not use facial recognition.'],
+    ['radio', 'Readers & turnstiles', 'Supported physical readers and turnstiles can form part of the wider access ecosystem.', 'images/full-height-turnstile.png']
   ];
 }

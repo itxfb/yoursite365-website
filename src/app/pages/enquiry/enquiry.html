@@ -6,19 +6,20 @@
       <p>{{ copy().intro }}</p>
       @if (kind() === 'founding') {
         <div class="form-offer"><strong>3 MONTHS FREE</strong><span>+ 20% OFF THE FOLLOWING 9 MONTHS</span></div>
-        <p>Your free period starts when your service goes live.</p>
         <ul class="benefit-list">
           @for (b of benefits; track b) {
             <li><svg icon="check" size="15" />{{ b }}</li>
           }
         </ul>
-        <small>Limited to the first 20 qualifying customer registrations accepted by YOUR SITE 365 LTD. Eligibility, service scope, commencement date and full promotional terms will be confirmed before subscription.</small>
+        <p>We will work closely with Founding Customers to understand their site processes and requirements, gather feedback and help shape the software’s development. Proposed features, design changes and additional services will be reviewed together. Any agreed development scope, delivery dates and additional charges will be confirmed in writing.</p>
+        <div class="eyebrow" id="offer-conditions"><span></span>OFFER CONDITIONS</div>
+        <ul offer-terms></ul>
       } @else {
         <div class="form-note"><svg icon="shield-check" /><b>Built around construction.</b><p>From one site to complex projects. Let’s find the right fit for your business.</p></div>
       }
       <div class="form-launch"><b>Launching 05 February 2027</b><div countdown compact></div></div>
       @if (kind() === 'contact') {
-        <p class="legal-small">YOUR SITE 365 LTD · Company No. 16684857<br />Princes Risborough, United Kingdom.</p>
+        <p class="legal-small">YOUR SITE 365 LTD · Company No. 16684857<br />Princes Risborough, United Kingdom.<br /><a href="mailto:info@yoursite365.co.uk">info@yoursite365.co.uk</a></p>
       }
     </div>
 
@@ -90,7 +91,7 @@
           <p class="form-error" role="alert">{{ error() }}</p>
         }
         <button class="btn dark" type="submit" [disabled]="saving()">{{ saving() ? 'Saving your enquiry…' : copy().submit }}<svg icon="arrow-up-right" size="17" /></button>
-        <small class="form-footnote">Enquiries are securely recorded on this website. No automated email confirmation is sent.</small>
+        <small class="form-footnote">Your enquiry is recorded and emailed to our team so we can respond.</small>
       </form>
     }
   </div>

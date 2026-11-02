@@ -26,7 +26,12 @@
     <h2>Technology that fits<br /><em>your project.</em></h2>
     <div class="feature-lines">
       @for (t of technology; track t[1]) {
-        <div><svg [icon]="t[0]" size="32" /><h3>{{ t[1] }}</h3><p>{{ t[2] }}</p></div>
+        <div>
+          <svg [icon]="t[0]" size="32" /><h3>{{ t[1] }}</h3><p>{{ t[2] }}</p>
+          @if (t[3]) {
+            <img class="feature-image" [src]="t[3]" alt="Illustrative full-height construction-site turnstile with solid roof canopy and facial-recognition access reader" width="1536" height="1024" loading="lazy" />
+          }
+        </div>
       }
     </div>
     <p>Controlled physical access does not require a personal worker software account. Workers remain subject to registration, identification and site-clearance requirements.</p>

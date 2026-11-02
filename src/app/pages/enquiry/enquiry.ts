@@ -1,6 +1,7 @@
 import { Component, computed, input, signal } from '@angular/core';
 import { Countdown } from '../../components/countdown';
 import { Icon } from '../../components/icon';
+import { OfferTerms } from '../../components/offer';
 
 type Kind = 'demo' | 'quote' | 'founding' | 'contact';
 
@@ -41,7 +42,7 @@ const COPY = {
 
 @Component({
   selector: 'app-enquiry',
-  imports: [Icon, Countdown],
+  imports: [Icon, Countdown, OfferTerms],
   templateUrl: './enquiry.html'
 })
 export class Enquiry {

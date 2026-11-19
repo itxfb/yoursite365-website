@@ -74,7 +74,7 @@ export class Enquiry {
     this.saving.set(true);
     this.error.set('');
     try {
-      const res = await fetch('/api/enquiries', {
+      const res = await fetch('https://yoursite365-enquiries-620896419452.europe-west2.run.app/api/enquiries', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -85,8 +85,8 @@ export class Enquiry {
           offer: this.kind() === 'founding' || data.get('offer') === 'on'
         })
       });
-      const body = await res.json();
-      if (!res.ok) throw new Error(body.error);
+      const body = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(body.error || 'We could not send your enquiry. Please try again or email info@yoursite365.co.uk.');
       this.reference.set(body.reference || 'RECEIVED');
     } catch (e) {
       this.error.set(e instanceof Error ? e.message : 'Please try again.');

@@ -39,7 +39,7 @@ export function render(b, reference) {
   const received = new Date().toLocaleString('en-GB', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/London' });
   const interests = b.interests ?? [];
   const link = (href, v) => `<a href="${href}" class="blue" style="color:${C.blue};text-decoration:none">${esc(v)}</a>`;
-  const chip = (v) => `<span class="soft ink" style="display:inline-block;margin:0 6px 6px 0;padding:5px 10px;border:1px solid ${C.line};border-radius:3px;background:${C.cream};color:${C.ink};font-size:13px;line-height:1.3">${esc(v)}</span>`;
+  const chip = (v) => `<table role="presentation" align="left" cellpadding="0" cellspacing="0" border="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt"><tr><td style="padding:0 6px 6px 0"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td class="soft ink" style="${T}padding:5px 10px;border:1px solid ${C.line};border-radius:3px;background:${C.cream};color:${C.ink};font-size:13px;line-height:1.3;white-space:nowrap">${esc(v)}</td></tr></table></td></tr></table>`;
   const rows = [
     ['Full name', name],
     ['Company', company],
@@ -88,8 +88,8 @@ export function render(b, reference) {
 a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important}
 @media (max-width:520px){
 .px{padding-left:22px!important;padding-right:22px!important}
-.stack td{display:block!important;width:auto!important;padding-right:0!important}
-.stack td+td{border-top:0!important;padding-top:0!important}
+.stack .rule{display:block!important;width:auto!important;padding-right:0!important}
+.stack .rule+.rule{border-top:0!important;padding-top:0!important}
 .h1{font-size:28px!important}
 }
 @media (prefers-color-scheme:dark){

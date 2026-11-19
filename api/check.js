@@ -32,6 +32,7 @@ assert.equal(subject, 'New quote request from Acme & Sons (YS-261119-AB12)');
 assert.ok(!html.includes('<b>Taylor') && html.includes('Sam &#60;b&#62;Taylor'));
 assert.ok(html.includes('Line one<br>Line &#60;two&#62;') && html.includes('1 March 2027') && html.includes('tel:07777114155'));
 assert.match(text, /Interested in: Registration, Site Access, Timesheets/);
+assert.ok(ok.interests.every((i) => html.includes(`${i}</td>`)));
 
 if (process.argv[2]) writeFileSync(process.argv[2], html);
 console.log('ok');
